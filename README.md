@@ -11,18 +11,19 @@ The Layout appears to each animated item with @mixin **v-translate**. It's a cus
 
 layout.sass:340
 ```sass
-      @include v-translate3d(0, 40, 0)
-      opacity: 0
-      margin: 5px 0
-      &.ready
-        @include v-translate3d(0, 0, 0)
-        opacity: 1
-        &:nth-of-type(1)
-          @include v-supertrans($x * 1, 0.82, 0.01, 0.63, 0.79)
-        &:nth-of-type(2)
-          @include v-supertrans($x * 2, 0.82, 0.01, 0.63, 0.79)
-        &:nth-of-type(3)
-          @include v-supertrans($x * 3, 0.82, 0.01, 0.63, 0.79)
+li
+  @include v-translate3d(0, 40, 0)
+  opacity: 0
+  margin: 5px 0
+  &.ready
+    @include v-translate3d(0, 0, 0)
+    opacity: 1
+    &:nth-of-type(1)
+      @include v-supertrans($x * 1, 0.82, 0.01, 0.63, 0.79)
+    &:nth-of-type(2)
+      @include v-supertrans($x * 2, 0.82, 0.01, 0.63, 0.79)
+    &:nth-of-type(3)
+      @include v-supertrans($x * 3, 0.82, 0.01, 0.63, 0.79)
 ```
 _vars.sass:48
 ```sass
