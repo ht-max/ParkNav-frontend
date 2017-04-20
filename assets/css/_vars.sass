@@ -1,0 +1,67 @@
+@import "../bootstrap/stylesheets/bootstrap/variables"
+@import "fonts"
+/** Colors **/
+
+$cBlue: #5a91b7
+$cBlueDark: #23303d
+$cBlueSky: #68a7d3
+$cBlueLight: #a3b7c9
+$cWhite: #ffffff
+$cGray: #adadad
+$cText: #232323
+$cTextLight: #262626
+$ctextSub: #636363
+$cFooter: #6b7886
+$gradientBlue: #6096bc, #417aa0
+$cGreen: #46d443
+$cGreenDark: #507c4f
+$cRed: #d82929
+$cOrange: #d17e45
+$cSectionBg: #f2f6f7
+
+/** Mixins **/
+@mixin v-scale($x:1, $y:1)
+  -webkit-transform: scale($x, $y)
+  -moz-transform: scale($x, $y)
+  -ms-transform: scale($x, $y)
+  -o-transform: scale($x, $y)
+  transform: scale($x, $y)
+@mixin v-transition($time: 200, $act: false)
+  @if $act == 'true'
+    $act: cubic-bezier(0.02, 0.69, 0.38, 0.82)
+  @else if $act == 'close'
+    $act: cubic-bezier(0.9,0,0.9,0.4)
+  @else
+    $act: linear
+  -webkit-transition: $act $time * 1ms
+  -moz-transition: $act $time * 1ms
+  -ms-transition: $act $time * 1ms
+  -o-transition: $act $time * 1ms
+  transition: $act $time * 1ms
+@mixin v-supertrans($time: 200, $a:0, $b:0, $c:0, $d:0)
+  $w: cubic-bezier($a, $b, $c, $d) $time * 1ms
+  -webkit-transition: $w
+  -moz-transition: $w
+  -ms-transition: $w
+  -o-transition: $w
+  transition: $w
+@mixin v-translate3d($x:0, $y:0, $z:0, $data: 0)
+  $a: 0
+  @if $data == 1
+    $a: $x, $y, $z
+  @else
+    $a: $x *1px, $y *1px, $z *1px
+  -webkit-transform: translate3d($a)
+  -moz-transform: translate3d($a)
+  -ms-transform: translate3d($a)
+  -o-transform: translate3d($a)
+  transform: translate3d($a)
+@mixin clearfix
+  display: table
+  clear: both
+  width: 100%
+  &:before, &:after
+    content: ''
+    clear: both
+
+

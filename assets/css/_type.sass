@@ -1,0 +1,137 @@
+@import "vars"
+ul, li, ol
+  margin: 0
+  padding: 0
+body
+  margin: 0
+  padding: 0
+  font: 400 16px/1.33 "open_sans", sans-serif
+  a
+    color: inherit
+    @include v-transition()
+    &:hover, &:focus
+      color: inherit
+sup
+  font-size: 0.5em
+  vertical-align: super
+  &.bold
+    font-weight: 700
+.light
+  font-weight: 300
+button
+  border: 0
+  outline: none
+.button, a.button
+  color: $cWhite
+  display: inline-block
+  background-color: $cBlue
+  background-image: linear-gradient(to bottom, $gradientBlue)
+  border: 1px solid $cBlue
+  font-size: 22px
+  line-height: 45px
+  border-radius: 6px
+  padding: 0 34px
+  font-weight: 300
+  &.big
+    line-height: 55px
+    font-size: 28px
+  &:hover
+    color: $cWhite
+    text-decoration: none
+    background-color: $cBlueSky
+    background-image: linear-gradient(to top, $gradientBlue)
+
+  &.bt:before
+    content: ''
+    display: inline-block
+    width: 24px
+    height: 24px
+    margin-right: 13px
+    vertical-align: middle
+    margin-top: -4px
+  &.bt-find:before
+    background: url("../img/icons/search.png") no-repeat 50% 50%/contain
+  &.bt-mail:before
+    background: url("../img/icons/mail.svg") no-repeat 50% 50%/contain
+
+
+.h1
+  font-size: 42px
+.h2
+  font-size: 36px
+.h3
+  font-size: 23px
+.theButton
+  .btn
+    margin: 0
+  .btnBlue
+    background: $cBlue
+    color: $cWhite
+    &.big
+      line-height: 50px
+      font-size: 28px
+      padding: 0 34px
+.theIcons
+  background: url("../img/icons/the_icons.png") no-repeat 0 0/auto 100%
+  display: inline-block
+  width: 34px
+  height: 34px
+  vertical-align: middle
+  margin: 0 8px
+  &.ic-set
+    background-position: 0 0
+  &.ic-parking
+    background-position: 50% 0
+  &.ic-time
+    background-position: 100% 0
+.tGreen
+  color: $cGreen
+.tRed
+  color: $cRed
+.tGrDark
+  color: $cGreenDark
+.tOrange
+  color: $cOrange
+form
+  .required
+    color: $cRed
+    font-size: 0.8em
+
+  .field
+    border: 1px solid $cText
+    border-radius: 0
+    padding: 0 13px
+    @include v-transition()
+    &:focus
+      box-shadow: inset 0 0 5px 0 $cBlue
+  input, select, textarea
+    outline: none
+  .select-field
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    padding: 0 0 0 13px
+    border-radius: 0
+    border: 1px solid $cText
+    background: $cWhite url("../img/icons/option_arrow.png")no-repeat right 5px top 50%/16px 8px
+  .form-group
+    input, select, textarea
+      border: 1px solid $cText
+      box-shadow: inset 0 0  1px 0 $cGray
+      outline: none
+      border-radius: 2px
+      height: 35px
+      font-size: 18px
+      &:focus
+        box-shadow: inset 0 0 5px 0 $cGray
+    textarea
+      height: 140px
+      resize: none
+    label
+      font-weight: 300
+      color: $cText
+  .form-control
+    &.wrongData
+      border: 1px solid $cRed
+
+    
