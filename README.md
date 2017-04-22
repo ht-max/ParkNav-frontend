@@ -8,6 +8,7 @@ In this project I used 2 **pre-processor** of front-end developing.
 ### Animation
 Items is animated when pages is loaded.   
 The Layout appears to each animated item with @mixin **v-translate**. It's a custom function called from **_vars.sass**
+![img](.files/feature_animation_full.gif)
 
 layout.sass:340
 ```sass
@@ -52,26 +53,26 @@ It's a first step to successful start the project.
 * **assets**
     * **bootstrap** - core of bootstrap scss
     * **css** - directory with all stylesheets
-        * *_fonts.scss* - part of layout
-        * *_vars.sass* - all variables of stylesheet layout
-        * *bootsrap.sass* - bootstrap file extends bootstrap core, the file override default bootstrap theme
-            * bootstrap.css - compiled bootstrap via pre-processor
-        * *layout.sass* - main layout which include variables, fonts 
-            * layout.css - compiled stylesheet
+        * ***_fonts.scss*** - part of layout
+        * ***_vars.sass*** - all variables of stylesheet layout
+        * ***bootsrap.sass*** - bootstrap file extends bootstrap core, the file override default bootstrap theme
+            * **bootstrap.css** - compiled bootstrap via pre-processor
+        * ***layout.sass*** - main layout which include variables, fonts 
+            * **layout.css** - compiled stylesheet
     * **js**
-        * jQuery - JS library 
-        * Moment js
-        * google analytics
-        * date-time picker
+        * **jQuery** - JS library 
+        * **Moment js**
+        * **google analytics**
+        * **date-time picker**
     * **img** - images which included in project
 * **includes**
-    * _footer.html - part of template of Footer
-    * _head.html - part of template of Head
-    * index.html - part of body of index page
-    * privacy.html - part of body of privacy page
+    * ***_footer.html*** - part of template of Footer
+    * ***_head.html*** - part of template of Head
+    * ***index.html*** - part of body of index page
+    * ***privacy.html*** - part of body of privacy page
 * *.htaccess* - configuration for Apache server. Mod-rewrite for pretty url without .html extension, like a /privacy
-* *index.jade* - pre-processor for Jade file, which included _head, _footer and index.html as body of page
-    * *index.html* - compiled index file and ready to render in browser
-* *privacy.jade*
-    * *privacy.html*
+* ***index.jade*** - pre-processor for Jade file, which included _head, _footer and index.html as body of page
+    * **index.html** - compiled index file and ready to render in browser
+* ***privacy.jade***
+    * **privacy.html**
 
