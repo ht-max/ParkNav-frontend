@@ -2,6 +2,8 @@
 
 Demo live: [project.parknav.codevery.com](http://project.parknav.codevery.com/)
 
+![img](.files/parknav_intro.jpg)
+
 In this project I used 2 **pre-processor** of front-end developing.
 * Jade - pre-processor for HTML template. I used **jade** to include template part to prepare whole template.
 * Scss / Sass - pre-processof for CSS. This feature used to create comfortable tree of stylesheet with custom function. Also able to override bootstrap variables.
